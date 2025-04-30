@@ -1,5 +1,7 @@
 import { getCoffee } from '@/utils/api';
 import { Data } from '@/utils/interfaces';
+import ProductInfoCard from '@/components/ProductInfoCard';
+
 
 export default async function ProductDetailsPage({ params }: { params: { id: string } }) {
   const { id } = params;
@@ -18,12 +20,8 @@ export default async function ProductDetailsPage({ params }: { params: { id: str
   }
 
   return (
-    <div>
-      <h1>{product.name}</h1>
-      <p>Price: ${product.price}</p>
-      <p>Category: {product.category.name}</p>
-      <img src={product.image.url} alt={product.name} width={200} height={200} />
-      <p>{product.description}</p>
+    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+      <ProductInfoCard product={product} /> {/* Render the ProductInfoCard with the product data */}
     </div>
   );
 }
