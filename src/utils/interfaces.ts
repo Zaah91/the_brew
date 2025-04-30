@@ -12,20 +12,20 @@ export interface Drink {
     }
 
 export interface Category {
-    id: number; // Matches API field
-    name: string; // Matches API field
+    id: number;
+    name: string;
     }
 
 export interface ProductImage {
-    id: number; // Matches API field
-    url: string; // Matches API field
+    id: number;
+    url: string;
     }
 
 export interface Data {
-    id: string; // Matches API field
-    name: string; // Matches API field
-    description: string; // Matches API field
-    price: number; // Matches API field (as a string in the API response)
-    category: Category; // Matches API field
-    image: ProductImage; // Matches API field
+    id: string;
+    name: string;
+    description: string;
+    price: number;
+    category: Category;
+    image: ProductImage;
     }

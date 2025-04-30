@@ -3,7 +3,13 @@ import { useShop } from '@/context/ShopContext';
 
 export default function CheckoutPage() {
   const { cart, clearCart, removeFromCart } = useShop(); 
-  const total = cart.reduce((sum, item) => sum + item.price, 0);
+  const total = cart.reduce((sum, item) => sum + (parseFloat(item.price.toString()) || 0), 0); // Calculate total price
+  // parseFloat ensures that the price is a number, even if it's a string
+  // toString() is used to convert the price to a string before parsing it
+
+  console.log('Cart in CheckoutPage:', cart); // Log the cart for debugging
+  console.log('Total in CheckoutPage:', total); // Log the total for debugging
+  console.log('useShop context:', useShop());
 
   return (
     <div>
