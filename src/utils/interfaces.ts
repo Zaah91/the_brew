@@ -5,26 +5,6 @@
 // This file is used in the api.ts file to define the structure of the data that is being fetched from the API.
 // It is also used in the DrinkCard.tsx file to define the structure of the data that is being passed to the component.
 // it allso makes the code reusable.
-/*
-export interface Category {
-    catId: string;
-    catName: string;
-  }
-
-export interface ProductImage {
-    imgId: string;
-    imgUrl: string;
-  }
-
-export interface Data {
-    productId: string;
-    productName: string;
-    productDesc: string;
-    productImage: ProductImage;
-    productCategory: Category;
-    productPrice: number;
-  } 
-*/
 export interface Drink {
     idDrink: string;
     strDrink: string;
