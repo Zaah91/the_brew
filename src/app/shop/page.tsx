@@ -4,7 +4,7 @@ import { Data } from '@/utils/interfaces';
 
 export default async function ShopPage() {
   const data:Data[] = await getCoffee();
-  console.log('Data in ShopPage:', data); // Log array of objects for debugging
+  // console.log('Data in ShopPage:', data); // Log array of objects for debugging
 
   return (
     <div>
@@ -13,10 +13,9 @@ export default async function ShopPage() {
           <h1 className="text-4xl font-bold">Dream selection of coffee and tea</h1>
         </header>
          
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
           {data.map((product) => (
-            <DrinkCard key={product.productId} product={product} />
-            // <DrinkCard key={product.id} product={product} />
+            <DrinkCard key={product.id} product={product} />
           ))}
         </div>
       </div>
