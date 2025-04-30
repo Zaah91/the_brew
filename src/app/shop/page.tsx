@@ -13,7 +13,7 @@ export default async function ShopPage() {
           <h1 className="text-4xl font-bold">Dream selection of coffee and tea</h1>
         </header>
          
-        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1">
+        <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {data.map((product) => (
             <DrinkCard key={product.id} product={product} />
           ))}
