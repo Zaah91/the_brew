@@ -11,7 +11,7 @@ export default function DrinkCard({ product }: { product: Data }) {
 
   return (
     <div className="border rounded-lg p-4 shadow-md hover:shadow-lg transition-shadow items-center gap-4">
-      <Link href={`/products/${product.id}`} passHref> {/* Add a link to the image */}
+      <Link href={`/shop/${product.id}`} passHref> {/* Add a link to the image */}
       <h3 className="font-bold text-lg mb-2">{product.name}</h3>
       
         <Image
@@ -30,8 +30,7 @@ export default function DrinkCard({ product }: { product: Data }) {
         <button className="w-60 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors cursor-pointer"
           onClick={() => addToCart({ id: product.id, name: product.name, price: product.price })}>
           Add to Cart (${product.price})
-        </button>
-      
+        </button>      
     </div>
   );
 }

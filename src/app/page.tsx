@@ -7,7 +7,7 @@ import { Data } from '@/utils/interfaces';
 export default async function HomePage() {
 
   const products: Data[] = await getCoffee(); // Assuming getCoffee fetches all products
-  const latestProducts = products.sort((a, b) => Number(b.id) - Number(a.id)).slice(0, 3);
+  const latestProducts = products.sort((a, b) => Number(b.id) - Number(a.id)).slice(0, 3); // Get the latest 3 products
 
   return (
     <div className="min-h-screen p-8 pb-20 sm:p-20">
