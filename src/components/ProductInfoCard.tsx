@@ -17,7 +17,6 @@ export default function DrinkCard({ product }: { product: Data }) {
         Go back
       </button>
       <div className="flex items-start gap-4">
-        {/* Image Section */}
         <div className="flex-shrink-0">
           <Image
             src={product.image.url || '/duck.webp'}
@@ -27,7 +26,6 @@ export default function DrinkCard({ product }: { product: Data }) {
             className="w-60 h-60 object-cover rounded-md"
           />
         </div>
-        {/* Text Section */}
         <div>
           <h3 className="font-bold text-lg mb-2">{product.name}</h3>
           <p className="text-gray-700 mb-4">{product.description}</p>
