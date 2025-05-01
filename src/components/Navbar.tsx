@@ -2,13 +2,12 @@
 import Link from 'next/link';
 
 const Navbar = () => {
-
   return (
-    <nav style={{ padding: '10px', background: '#f4f4f4' }}>
-      <Link href="/" style={{ marginRight: '15px' }}>Home</Link>
-      <Link href="/shop" style={{ marginRight: '15px' }}>Products</Link>
-      {/* <Link href="/nonAlcohol" style={{ marginRight: '15px' }}>Non alcoholic</Link> */}
-      <Link href="/checkout">Cart</Link>
+    <nav className="flex items-center px-10 py-4 bg-[#FAF0E6] text-[18px]">
+      <Link href="/" className="mr-4 text-black">Home</Link>
+      <Link href="/shop" className="mr-4 text-black">Shop</Link>
+      {/* <Link href="/nonAlcohol" className="mr-4 text-black">Non alcoholic</Link> */}
+      <Link href="/checkout" className="text-black ml-auto">Cart</Link>
     </nav>
   );
 };

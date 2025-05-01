@@ -15,6 +15,7 @@ export default async function HomePage() {
         <h1 className="text-4xl font-bold">Welcome to The Brew</h1>
         <p className="text-lg mt-2">We got the coffee, or the tea, for any taste.</p>
         <p className="text-lg mt-2">So treat yourself, with some good brew.</p>
+        <h2 className='text-2xl mt-6'>Whats New</h2>
       </header>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {latestProducts.map((product) => (
