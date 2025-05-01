@@ -22,7 +22,18 @@ export default function CheckoutPage() {
             <ul className="space-y-2">
               {cart.map((item, idx) => (
                 <li key={idx} className="border p-2 rounded flex justify-between items-center">
-                  <span>{item.name} - ${item.price}</span>
+                  <span className="flex items-center gap-2">
+                    <span className="w-12 h-12 flex-shrink-0"><img
+                      src={item.img || '/duck.webp'}
+                      alt={item.name}
+                      width={50}
+                      height={50}
+                      className="w-12 h-12 object-cover rounded"
+                    />
+                    </span>
+                    {item.name} - ${item.price}
+                  </span>
+                 
                   <button
                     onClick={() => removeFromCart(idx)} // Remove item from cart
                     className="bg-red-500 text-white px-2 py-1 rounded"

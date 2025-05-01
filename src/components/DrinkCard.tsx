@@ -28,7 +28,7 @@ export default function DrinkCard({ product }: { product: Data }) {
         </Link>
 
         <button className="w-60 bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 transition-colors cursor-pointer"
-          onClick={() => addToCart({ id: product.id, name: product.name, price: product.price })}>
+          onClick={() => addToCart({ id: product.id, img: product.image.url, name: product.name, price: product.price })}>
           Add to Cart (${product.price})
         </button>      
     </div>

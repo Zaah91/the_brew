@@ -1,7 +1,7 @@
 'use client';
 import React, { createContext, useContext, useState, ReactNode } from 'react';
 
-type Product = { id: string; name: string; price: number; };
+type Product = { id: string; img: string; name: string; price: number; };
 
 type ShopContextType = {
   profit: number;
